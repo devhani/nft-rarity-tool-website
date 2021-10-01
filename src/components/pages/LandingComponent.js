@@ -27,8 +27,8 @@ export const LandingPage = ({ user }) => {
              * if they go to any other URL on the site before
              * connecting their wallet to it. 
              */}
-            <Row id="landing" className="pt-5 px-5">
-                <Col sm={10} md={6} className="text-white d-flex flex-column justify-content-center">
+            <Row id="landing" className="pt-5 px-3">
+                <Col sm={12} md={6} className="text-white d-flex flex-column justify-content-center">
                     <h1>ToolThing</h1>
                     <hr />
                     <p>
@@ -39,9 +39,8 @@ export const LandingPage = ({ user }) => {
                         </Link>
                     </p>
                 </Col>
-                <Col sm={10} md={3} className="mx-auto" >
+                <Col sm={12} md={6} className="mx-auto">
                     <img
-                        className="mx-auto"
                         alt="fangs-gif"
                         src="/10fangs.gif"
                         style={{ borderRadius: "20%" }}
