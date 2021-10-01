@@ -43,8 +43,7 @@ const Main = () => {
             const accounts = await ethereum.request({ method: "eth_requestAccounts" });
 
             setCurrentAccount(accounts[0]);
-            //need later for minting
-            //setupEventListener();
+            setupEventListener();
 
 
         } catch (error) {
@@ -79,7 +78,7 @@ const Main = () => {
         <>
             <Header />
             <Switch>
-                <Route exact path='/' render={() => <LandingPage user={currentAccount} />} />
+                <Route exact path='/' render={() => <LandingPage user={currentAccount} connectWallet={connectWallet()} />} />
                 <Route path='/home' component={Home} />
                 <Route path='/about' component={About} />
                 <Redirect to='/' />

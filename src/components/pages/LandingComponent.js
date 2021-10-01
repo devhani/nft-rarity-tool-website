@@ -10,9 +10,9 @@ const MintButton = () => {
     )
 }
 
-const ConnectButton = () => {
+const ConnectButton = ({ connect }) => {
     return (
-        <Button variant="warning" size="lg">
+        <Button onClick={connect} variant="warning" size="lg">
             Connect
         </Button>
     )
@@ -20,7 +20,7 @@ const ConnectButton = () => {
 
 
 
-export const LandingPage = ({ user }) => {
+export const LandingPage = (props) => {
     return (
         <div className="container-fluid">
             {/**This is where the code will redirect the user
@@ -53,7 +53,7 @@ export const LandingPage = ({ user }) => {
                          * but if the wallet is connected AND it already holds an NFT pass,
                          * redirect them to the /home route
                          */}
-                        {user ? <MintButton /> : <ConnectButton />}
+                        {props.user ? <MintButton connect={props.connectWallet} /> : <ConnectButton />}
                     </Col>
                 </Row>
             </Row>
