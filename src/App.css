@@ -1,5 +1,9 @@
+html,body{
+    min-height: 100vh;
+}
 #landing{
     background: linear-gradient(.25turn, #8F00E0, #1F940F);
+    min-height: 100vh;
 }
 #about{
     background: linear-gradient(.75turn, #8F00E0, #1F940F);
@@ -20,6 +24,4 @@
     border-radius: 25px;
 }
 
-.blockPage{
-    height: 100vh;
-}
+

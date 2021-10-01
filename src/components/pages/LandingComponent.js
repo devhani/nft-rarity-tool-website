@@ -27,7 +27,7 @@ export const LandingPage = ({ user }) => {
              * if they go to any other URL on the site before
              * connecting their wallet to it. 
              */}
-            <Row id="landing" className="p-5 blockPage">
+            <Row id="landing" className="pt-5 px-5">
                 <Col sm={10} md={6} className="text-white d-flex flex-column justify-content-center">
                     <h1>ToolThing</h1>
                     <hr />
@@ -49,7 +49,7 @@ export const LandingPage = ({ user }) => {
                     />
                 </Col>
                 <Row className="pb-5">
-                    <Col sm={3} className="d-flex flex-column mx-auto justify-content-center">
+                    <Col sm={3} md={5} className="d-flex flex-column mx-auto justify-content-center p-5">
                         {/**IF wallet is connected, show mint, otherwise, show connect
                          * but if the wallet is connected AND it already holds an NFT pass,
                          * redirect them to the /home route
