@@ -1,0 +1,25 @@
+#landing{
+    background: linear-gradient(.25turn, #8F00E0, #1F940F);
+}
+#about{
+    background: linear-gradient(.75turn, #8F00E0, #1F940F);
+    color:white;
+    height: 100%;
+}
+
+#aboutBlock{
+    background-color: white;
+    color:black;
+    border: 3px solid black;
+    border-radius: 25px;
+}
+#roadMap{
+    background-color: white;
+    color:black;
+    border: 3px solid black;
+    border-radius: 25px;
+}
+
+.blockPage{
+    height: 100vh;
+}
