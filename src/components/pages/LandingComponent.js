@@ -41,9 +41,8 @@ export const LandingPage = ({ user }) => {
                 </Col>
                 <Col sm={10} md={3} className="mx-auto" >
                     <img
+                        className="mx-auto"
                         alt="fangs-gif"
-                        height={400}
-                        width={400}
                         src="/10fangs.gif"
                         style={{ borderRadius: "20%" }}
                     />
