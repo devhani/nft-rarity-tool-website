@@ -7,7 +7,7 @@ export const About = () => {
     return (
         <Jumbotron id="about" className="container-fluid">
             <Row className="p-5">
-                <Col id="aboutBlock" sm={8} className="mx-auto p-5">
+                <Col id="aboutBlock" sm={10} className="mx-auto py-5">
                     <h1 className="display-1">About</h1>
                     <hr />
                     <p className="lead">
@@ -17,7 +17,7 @@ export const About = () => {
 
                     </p>
                 </Col>
-                <Col id="roadMap" sm={8} className="mx-auto p-5 mt-5">
+                <Col id="roadMap" sm={8} className="mx-auto py-5 mt-5">
                     <h2 className="display-2">RoadMap</h2>
                     <hr />
                     <p className="lead">

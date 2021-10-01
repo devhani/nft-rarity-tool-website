@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Navbar, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 export const Header = () => {
@@ -7,7 +8,7 @@ export const Header = () => {
         <Navbar bg="light" expand="lg">
             <Container>
                 <Navbar.Brand>
-                    RareTool
+                    <Link className="nav-link text-black" to='/'>RareTool</Link>
                 </Navbar.Brand>
             </Container>
         </Navbar>
