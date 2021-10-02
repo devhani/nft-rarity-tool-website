@@ -1,18 +1,22 @@
-import React, { useState } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { Header } from './other/HeaderComponent';
 import { LandingPage } from './pages/LandingComponent';
 import { ethers } from 'ethers';
 import Home from './pages/HomeComponent';
 import { About } from './pages/AboutComponent';
+import { connect } from 'react-redux'
 
 const CONTRACT_ABI = ''
 const CONTRACT_ADDRESS = ''
 
-const Main = () => {
+const mapStateToProps = state => {
+    return {
+        currentUser: state.currentUser,
+    }
+}
 
-    const [currentAccount, setCurrentAccount] = useState('');
-
+const Main = (props) => {
 
     //check if the user has a connected wallet / account
     const checkIfWalletIsConnected = async () => {
@@ -21,9 +25,8 @@ const Main = () => {
 
         if (accounts.length !== 0) {
             const account = accounts[0];
-            setCurrentAccount(account);
-            //need later for minting
-            //setupEventListener();
+            //setCurrentAccount(account);
+            setupEventListener();
         } else {
             alert("No account found - please connect")
         }
@@ -42,7 +45,7 @@ const Main = () => {
 
             const accounts = await ethereum.request({ method: "eth_requestAccounts" });
 
-            setCurrentAccount(accounts[0]);
+            //setCurrentAccount(accounts[0]);
             setupEventListener();
 
 
@@ -78,7 +81,7 @@ const Main = () => {
         <>
             <Header />
             <Switch>
-                <Route exact path='/' render={() => <LandingPage user={currentAccount} connectWallet={connectWallet()} />} />
+                <Route exact path='/' render={() => <LandingPage user={props.currentUser} />} />
                 <Route path='/home' component={Home} />
                 <Route path='/about' component={About} />
                 <Redirect to='/' />
@@ -86,4 +89,4 @@ const Main = () => {
         </>
     )
 }
-export default Main;
+export default withRouter(connect(mapStateToProps)(Main));

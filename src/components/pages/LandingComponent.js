@@ -21,6 +21,7 @@ const ConnectButton = ({ connect }) => {
 
 
 export const LandingPage = (props) => {
+
     return (
         <div className="container-fluid">
             {/**This is where the code will redirect the user
